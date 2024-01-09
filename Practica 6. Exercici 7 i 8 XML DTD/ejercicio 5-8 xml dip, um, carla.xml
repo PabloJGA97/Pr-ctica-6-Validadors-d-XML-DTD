@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--Para codificar y poder usar simbolos especiales-->
+<!DOCTYPE TecnoComponentes SYSTEM "ejercicio 5-8.dtd">
+<TecnoComponentes> <!--Nombre de empresa-->
+    <Componentes> <!--Seccion de componentes-->
+        <Placa_Base> <!--Tipos de componentes que  tenemos-->
+            <Marca Nombre="MSI"> <!--La marca o el proviedor de placabase-->
+                <Modelos> <!--Modelos de placa base de marca "MSI" que esta en nuestro stock-->
+                    <Nom>MSI Z790 GAMING PLUS WIFI 
+                        <Precio>241€</Precio>
+                    </Nom>
+                    <Nom>MSI MEG Z790 ACE 
+                        <Precio>759€</Precio>
+                    </Nom>
+                    <Nom> MSI MEG Z790 ACE MAX 
+                        <Precio>759€</Precio>
+                    </Nom>
+                </Modelos>
+            </Marca>
+            <Marca Nombre="Asus"> <!--La marca o el proviedor de placabase-->
+                <Modelos> <!--Modelos de placa base de marca "Asus" que esta en nuestro stock-->
+                    <Nom> ASUS ROG STRIX B550M-PLUS 
+                        <Precio>369€</Precio>
+                    </Nom>
+                    <Nom> Asus ROG MAXIMUS Z690 EXTREME 
+                        <Precio>1365€</Precio>
+                    </Nom>
+                    <Nom> ASUS ROG Maximus Z690 Hero EVA Edition 
+                        <Precio>875€</Precio>
+                    </Nom>
+
+                </Modelos>
+            </Marca>
+        </Placa_Base>
+
+        <Disco_duro> <!--Componentes Discos duro-->
+            <Marca Nombre="Keystone">
+                <Modelos>
+                    <Nom>Kingston NV2 1TB SSD PCIe 4.0 NVMe Gen 4x4 
+                        <precio>54€</precio>
+                    </Nom>
+                    <Nom>Kingston NV2 2TB SSD PCIe 4.0 NVMe Gen 4x4 
+                        <precio>103€</precio>
+                    </Nom>
+                    <Nom> Kingston KC3000 SSD 2TB M.2 PCIe 4.0 NVMe 
+                        <precio>126€</precio>
+                    </Nom>
+                </Modelos>
+            </Marca>
+        </Disco_duro>
+
+        <procesador> <!--Componentes Procesador-->
+            <Nom>Intel® Core™ i5
+                <Desc> 6 núcleos y 12 hilos</Desc>
+                <Precio>179,99€</Precio>
+            </Nom>
+            
+            <Nom>AMD Ryzen 7 5800X
+                <Desc>16 núcleos,32 hilos</Desc>
+                <Precio>336,06€</Precio>
+            </Nom>
+            
+            <Nom>Intel® Core™ i7-13700K
+                <Desc>16 núcleos,24 hilos</Desc>
+                <Precio>418,95€</Precio>
+            </Nom>
+            
+        </procesador>
+
+        <ram><!--Componentes RAM-->
+            <Modelo>FURY Beast DDR4
+                <Desc>3200 MHz 16GB 2x8GB CL1</Desc>
+                <Precio>42,99€</Precio>
+            </Modelo>
+            <Modelo>Corsair Vengeance DDR5
+                <Desc>6000 MHz 2x16GB CL36</Desc>
+                <Precio>134€</Precio>
+            </Modelo>
+            
+            <Modelo>Corsair Vengeance DDR5
+                <Desc>6000MHz 64GB 2x32GB CL30</Desc>
+                <Precio>306,79€</Precio>
+            </Modelo>
+        </ram>
+
+        <refrigeración_líquida> <!--Componentes refigeración líquida -->
+            <Marca Nombre="MSI">
+                <Modelo>
+                    <Nom>MSI MAG CORELIQUID E240 Kit de Refrigeración Líquida 
+                        <precio>132€</precio>
+                    </Nom>
+                    <Nom>MSI MAG CORELIQUID P360 Kit de Refrigeración Líquida
+                        <precio>128€</precio>
+                    </Nom>
+                    <Nom>MSI MAG CORELIQUID E360 Kit de Refrigeración Líquida
+                        <precio>160€</precio>
+                    </Nom>
+                </Modelo>
+            </Marca>
+        </refrigeración_líquida>
+
+        <torres> <!--Componentes Torres -->
+            <Marca Nombre = "ASUS">
+                <Modelo>
+                    <Nom>ASUS TUF Gaming GT502 Cristal Templado USB 3.0 Negra
+                        <Precio>160€</Precio>
+                    </Nom>
+                    <Nom>
+                        ASUS GX601 ROG Strix Helios Cristal Templado USB 3.0
+                        <Precio>330€</Precio>
+                    </Nom>
+                    <Nom>ASUS ROG Hyperion GR701 Cristal Templado USB-C ARGB Negra
+                        <Precio>430€</Precio>
+                    </Nom>
+                </Modelo>
+            </Marca>
+        </torres>
+
+        <tarjeta_grafica> <!--Componentes Tarjeta Grafica-->
+
+            <Modelo>Gigabyte GeForce GT 710
+                <Desc>4096 x 2160 px 954 MHz</Desc>
+                <Precio>6045€</Precio>
+            </Modelo>
+            
+            <Modelo>Gigabyte GeForce GT 1030
+                <Desc>1920 x 1200 px 1256 MHz</Desc>
+                <Precio>120,74€</Precio>
+            </Modelo>
+           
+            <Modelo>GeForce RTX 4080
+                <Desc>7680 x 4320 px 2700 MHz</Desc>
+                <Precio>1529,00€</Precio>
+            </Modelo>
+
+        </tarjeta_grafica>
+
+        <tarjeta_de_sonido> <!--Componentes Tarjeta de sonido-->
+            <Modelo>Creative Sound Blaster Audigy
+                <Desc>120 dB,sonido 24 de bits y 192 kH</Desc>
+                <Precio>42,99€</Precio>
+            </Modelo>
+            
+            <Modelo>Sound BlasterX AE-5 Plus
+                <Desc>122 db,sonido 32-bit y 384 kHz</Desc>
+                <Precio>111,99€</Precio>
+            </Modelo>
+            
+            <Modelo>Creative Sound BlasterX AE-5
+                <Desc>122 dB,32-bit / 384 kHz</Desc>
+                <Precio>132,98€</Precio>
+            </Modelo>
+            
+        </tarjeta_de_sonido>
+
+        <ventilador_CPU> <!--Componentes ventilador-->
+            <Marca Nombre = "Be Quite">
+                <Modelo>
+                    <Nom>Be Quiet Dark Rock Pro 4
+                        <Precio>105€</Precio>
+                    </Nom>
+                    <Nom>Be Quiet Pure Rock 2 FX ARGB Ventilador CPU 120mm Negro
+                        <precio>60€</precio>
+
+                    </Nom>
+                </Modelo>
+            </Marca>
+        </ventilador_CPU>
+
+    </Componentes>
+    
+   <Clientes>
+        <Cliente numero_cliente="1"> <!--Numero de clientes-->
+            <ClienteID>108</ClienteID> <!--ID del cliente en la página-->
+            <Fecha_Alta>04/12/2023</Fecha_Alta> <!--Fecha de alta como comprador-->
+            <DNI_cliente><!--Informacion del Cliente-->
+                <DNI>499512203A</DNI>
+                <Nombre_completo>
+                    <nombre>Carla</nombre>
+                    <apellido>Cuellar</apellido>
+                </Nombre_completo>
+                <Domicilio>
+                    <Calle>Av. Carrilet 239</Calle>
+                    <Ciudad>Barcelona</Ciudad>
+                </Domicilio>
+                <Info_nacimiento>
+                    <Fecha_nacimiento>06-03-2002</Fecha_nacimiento>
+                    <Lugar_nacimiento></Lugar_nacimiento>
+                </Info_nacimiento>
+            </DNI_cliente>
+            <TipoCliente><!--Tipo de cliente si es empresa o particular-->
+                <Tipo>Particular</Tipo>
+                <Tipo2>Socio</Tipo2><!--Si es socio o no-->
+            </TipoCliente>
+            <Contacto><!--Informacion para contactar con el cliente-->
+                <Telefono>679 569 45</Telefono>
+                <Email>carla.cuellar@gmail.com</Email>
+            </Contacto>
+            <Direccion_Completa> <!--Direccion del cliente actual-->
+                <País>España</País>
+                <Ciudad>Barcelona</Ciudad>
+                <Municipio>L'hospitalet</Municipio>
+                    <CodigoPostal>9740</CodigoPostal>
+                <Direccion>
+                    <callecasa>Calle Barcelona</callecasa>
+                    <Piso>4-2</Piso>
+                    <Puerta>2</Puerta>
+                </Direccion>
+                <Region>0</Region>
+            </Direccion_Completa>
+            <Datos_bancario><!--Datos del banco del cliente-->
+                <Numero_cuenta>ES2123342343242</Numero_cuenta>
+                <cod>804</cod>
+                <banco>Caixa Bank</banco>
+            </Datos_bancario>
+        </Cliente>
+    </Clientes>
+
+    <Ordenes>
+        <Orden_Cliente>
+            <clienteID>108</clienteID>
+            <Nombre_completo>
+                <nombre>Carla</nombre>
+                <apellido>Cuellar</apellido>
+            </Nombre_completo>
+            <Fecha_Paquete>
+                <Fecha_Orden>2023-05-06T00:00:00</Fecha_Orden>
+                <Fecha_Requerida>2023-05-20T00:00:00</Fecha_Requerida>
+            </Fecha_Paquete>
+            <Envio_Info Envio_Fecha="2023-05-09T00:00:00">
+                <Envio_Via>2</Envio_Via>
+                <Cargamento>3.35</Cargamento>
+                <Envio_enbarcancion>Iberia</Envio_enbarcancion>
+                <Envio_Direccion>Calle Iberia 234</Envio_Direccion>
+                <Envio_Ciudad>Madrid</Envio_Ciudad>
+                <Envio_REgion>O</Envio_REgion>
+                <Envio_Codigo_Postal>97403</Envio_Codigo_Postal>
+                <Envio_Pais>España</Envio_Pais>
+            </Envio_Info>
+        </Orden_Cliente>
+    </Ordenes>
+
+</TecnoComponentes>
