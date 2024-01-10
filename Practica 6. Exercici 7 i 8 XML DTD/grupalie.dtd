@@ -55,7 +55,7 @@
 <!ELEMENT Fecha_Paquete (Fecha_Orden, Fecha_Requerida)>
 <!ELEMENT Fecha_Orden (#PCDATA)>
 <!ELEMENT Fecha_Requerida (#PCDATA)>
-<!ELEMENT Envio_Info (Envio_Via, Cargamento, Envio_embarcacion, Envio_Direccion, Envio_Ciudad, Envio_Region, Envio_Codigo_Postal, Envio_Pais)>
+<!ELEMENT Envio_Info (Envio_Via, Cargamento, Envio_embarcacion, Envio_Direccion, Envio_Ciudad, Envio_Region?, Envio_Codigo_Postal, Envio_Pais)>
 <!ELEMENT Envio_Via (#PCDATA)>
 <!ELEMENT Cargamento (#PCDATA)>
 <!ELEMENT Envio_embarcacion (#PCDATA)>
