@@ -242,10 +242,10 @@
             <Envio_Info Envio_Fecha="2023-05-09T00:00:00">
                 <Envio_Via>2</Envio_Via>
                 <Cargamento>3.35</Cargamento>
-                <Envio_enbarcancion>Iberia</Envio_enbarcancion>
+                <Envio_embarcacion>Iberia</Envio_embarcacion>
                 <Envio_Direccion>Calle Iberia 234</Envio_Direccion>
                 <Envio_Ciudad>Madrid</Envio_Ciudad>
-                <Envio_REgion>O</Envio_REgion>
+                <Envio_Region>O</Envio_Region>
                 <Envio_Codigo_Postal>97403</Envio_Codigo_Postal>
                 <Envio_Pais>España</Envio_Pais>
             </Envio_Info>

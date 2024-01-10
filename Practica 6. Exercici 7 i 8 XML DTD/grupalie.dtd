@@ -14,12 +14,11 @@
 <!ELEMENT Nom (#PCDATA | Precio | Desc)*>
 <!ELEMENT Precio (#PCDATA)>
 <!ELEMENT Desc (#PCDATA)>
-<!ATTLIST Marca Nombre (MSI | ASUS | Keystone | Be_Quite) #REQUIRED>
 <!ELEMENT Clientes (Cliente)>
 <!ELEMENT Cliente (ClienteID, Fecha_Alta, DNI_cliente, TipoCliente, Contacto, Direccion_completa, Datos_bancario)>
 <!ELEMENT ClienteID (#PCDATA)>
 <!ELEMENT Fecha_Alta (#PCDATA)>
-<!ELEMENT DNI_cliente (DNI, Nombre_completo, Domicilio, Info_nacimiento)>
+<!ELEMENT DNI_cliente (DNI, Nombre_completo*, Domicilio, Info_nacimiento)>
 <!ELEMENT DNI (#PCDATA)>
 <!ELEMENT Nombre_completo (nombre, apellido)>
 <!ELEMENT nombre (#PCDATA)>
@@ -50,9 +49,24 @@
 <!ELEMENT Numero_cuenta (#PCDATA)>
 <!ELEMENT cod (#PCDATA)>
 <!ELEMENT banco (#PCDATA)>
-<!ATTLIST Cliente numero_cliente ID #REQUIRED>
-
 <!ELEMENT Ordenes (Orden_Cliente)>
+<!ELEMENT Orden_Cliente (clienteID, Nombre_completo, Fecha_Paquete, Envio_Info)>
+<!ELEMENT clienteID (#PCDATA)>
+<!ELEMENT Fecha_Paquete (Fecha_Orden, Fecha_Requerida)>
+<!ELEMENT Fecha_Orden (#PCDATA)>
+<!ELEMENT Fecha_Requerida (#PCDATA)>
+<!ELEMENT Envio_Info (Envio_Via, Cargamento, Envio_embarcacion, Envio_Direccion, Envio_Ciudad, Envio_Region, Envio_Codigo_Postal, Envio_Pais)>
+<!ELEMENT Envio_Via (#PCDATA)>
+<!ELEMENT Cargamento (#PCDATA)>
+<!ELEMENT Envio_embarcacion (#PCDATA)>
+<!ELEMENT Envio_Direccion (#PCDATA)>
+<!ELEMENT Envio_Ciudad (#PCDATA)>
+<!ELEMENT Envio_Region (#PCDATA)>
+<!ELEMENT Envio_Codigo_Postal (#PCDATA)>
+<!ELEMENT Envio_Pais (#PCDATA)>
+<!ATTLIST Cliente numero_cliente ID #REQUIRED>
+<!ATTLIST Envio_Info Envio_Fecha (2023-05-09T00:00:00) #REQUIRED>
+<!ATTLIST Marca Nombre (MSI | ASUS | Keystone | Be_Quite) #REQUIRED>
 
 <!-- 
 CANVIS APLICATS RESPECT L'XML original
@@ -73,9 +87,9 @@ s'escriguin igual tant a l'apertura com al tancament i a la resta d'instàncies 
 6. Hem hagut de cambiar el nom de l'atribut "Be Quite" a "Be_quite" ja que DTD no admet espais com a nom. 
 
 7. Hem eliminat els accents en algunes etiquets per evitar errors d'ambigüitat
--->
 
-<!-- 
+8. Linia 185. Hem canviat el valor de '1' a 'a1' perquè sigui compatible segons la sintaxi de DTD
+
 COSES APRESES DELS ERRORS
 1. 
 '<!ELEMENT Componentes (Placa_Base, Disco_duro, procesador, ram, refrigeración_liquida, torres, tarjeta_grafica, tarjeta_de_sonido, ventilador_CPU)>'
