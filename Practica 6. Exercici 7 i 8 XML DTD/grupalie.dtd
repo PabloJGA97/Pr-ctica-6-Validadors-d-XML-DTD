@@ -1,0 +1,92 @@
+<!ELEMENT TecnoComponentes (Componentes, Clientes, Ordenes)>
+<!ELEMENT Componentes (Placa_Base, Disco_duro, procesador, ram, refrigeracion_liquida, torres, tarjeta_grafica, tarjeta_de_sonido, ventilador_CPU)>
+<!ELEMENT Placa_Base (Marca* | Modelo*)>
+<!ELEMENT Marca (Modelo*)>
+<!ELEMENT Modelo (Nom+)>
+<!ELEMENT Disco_duro (Marca* | Modelo*)>
+<!ELEMENT procesador (Marca* | Modelo*)>
+<!ELEMENT ram (Marca* | Modelo*)>
+<!ELEMENT refrigeracion_liquida (Marca* | Modelo*)>
+<!ELEMENT torres (Marca* | Modelo*)>
+<!ELEMENT tarjeta_grafica (Marca* | Modelo*)>
+<!ELEMENT tarjeta_de_sonido (Marca* | Modelo*)>
+<!ELEMENT ventilador_CPU (Marca* | Modelo*)>
+<!ELEMENT Nom (#PCDATA | Precio | Desc)*>
+<!ELEMENT Precio (#PCDATA)>
+<!ELEMENT Desc (#PCDATA)>
+<!ATTLIST Marca Nombre (MSI | ASUS | Keystone | Be_Quite) #REQUIRED>
+<!ELEMENT Clientes (Cliente)>
+<!ELEMENT Cliente (ClienteID, Fecha_Alta, DNI_cliente, TipoCliente, Contacto, Direccion_completa, Datos_bancario)>
+<!ELEMENT ClienteID (#PCDATA)>
+<!ELEMENT Fecha_Alta (#PCDATA)>
+<!ELEMENT DNI_cliente (DNI, Nombre_completo, Domicilio, Info_nacimiento)>
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT Nombre_completo (nombre, apellido)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT Domicilio (Calle, Ciudad)>
+<!ELEMENT Calle (#PCDATA)>
+<!ELEMENT Ciudad (#PCDATA)>
+<!ELEMENT Info_nacimiento (Fecha_nacimiento, Lugar_nacimiento)>
+<!ELEMENT Fecha_nacimiento (#PCDATA)>
+<!ELEMENT Lugar_nacimiento (#PCDATA)>
+<!ELEMENT TipoCliente (Tipo, Tipo2)>
+<!ELEMENT Tipo (#PCDATA)>
+<!ELEMENT Tipo2 (#PCDATA)>
+<!ELEMENT Contacto (Telefono, Email)>
+<!ELEMENT Telefono (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Direccion_completa ANY>
+<!ELEMENT Pais (#PCDATA)>
+<!ELEMENT Dir_ciudad (#PCDATA)>
+<!ELEMENT Municipio (#PCDATA |CodigoPostal)*>
+<!ELEMENT CodigoPostal (#PCDATA)>
+<!ELEMENT Direccion (callecasa, Piso, Puerta)>
+<!ELEMENT callecasa (#PCDATA)>
+<!ELEMENT Piso (#PCDATA)>
+<!ELEMENT Puerta (#PCDATA)>
+<!ELEMENT Region (#PCDATA)>
+<!ELEMENT Datos_bancario (Numero_cuenta, cod, banco)>
+<!ELEMENT Numero_cuenta (#PCDATA)>
+<!ELEMENT cod (#PCDATA)>
+<!ELEMENT banco (#PCDATA)>
+<!ATTLIST Cliente numero_cliente ID #REQUIRED>
+
+<!ELEMENT Ordenes (Orden_Cliente)>
+
+<!-- 
+CANVIS APLICATS RESPECT L'XML original
+    
+1. per fer que Marca sigui opcional, hem hagut d'utilitzar el pipe per definir els parents de Marca dintre de la definició del grandparents dels parents
+
+2. linia 50 hem afegit el parent child de "Modelo" per no haver de fer més d'un pipe ja que "Nom" només surt una vegada. 
+
+3. L'etiqueta Modelo a vegades conté text i quan definim com PCDATA, no pot contenir etiquetes. Si hi ha una forma de definir un element com PCDATA que pot o no tenir etiquetes, ho desconeixem
+pel momennt. Per tant hem afegit Modelo com child obligatori de Modelo, ja que a l'XML base Modelo és una etiqueta opcional i a vegades 
+s'utilitzava directament l'etiqueta Nom, que podia funcionar alhora com child de Marca o de Modelo. 
+
+4. Per definir elements que poden contenir text i etiquetes (childs) la sintaxi és '(#PCDATA | childElement)*' El '*' permet que en cas de que no hi hagi text, encara pugui tener child. 
+
+5. Algunes etiquetes com 'Precio' tenien majúscules inicials i altres no. Les hem estandaritzat amb majúscula inicial. XML és case sensitive, per tant és important que les etiquetes i atributs
+s'escriguin igual tant a l'apertura com al tancament i a la resta d'instàncies en el document. 
+
+6. Hem hagut de cambiar el nom de l'atribut "Be Quite" a "Be_quite" ja que DTD no admet espais com a nom. 
+
+7. Hem eliminat els accents en algunes etiquets per evitar errors d'ambigüitat
+-->
+
+<!-- 
+COSES APRESES DELS ERRORS
+1. 
+'<!ELEMENT Componentes (Placa_Base, Disco_duro, procesador, ram, refrigeración_liquida, torres, tarjeta_grafica, tarjeta_de_sonido, ventilador_CPU)>'
+Havíem escrit aquesta línia i posava que Componentes havien de contenir els elements de dintre. Estaven tots subratllats en vermell excep Placa_Base.
+
+L'error era que no havíem definit la resta de childs ja que pensava que al declarar-ho com child ja estava definit
+Per tant hem hagut de copiar l'estructura de la definicio de l'element Placa_Base '<!ELEMENT Placa_Base (Marca* | Modelo*)>'i canviar el nom per cada child
+i d'aquesta manera han desaparegut tots els errors. 
+
+PROBLEMES 
+1. <!ELEMENT Direccion_completa (Pais, Dir_ciudad, Municipio, Direccion, Region)>
+dona error i tot està ben indentat i escrit, per això s'ha definit com ANY
+
+-->
